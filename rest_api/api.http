@@ -1,0 +1,55 @@
+
+GET https://disease.sh/v3/covid-19/jhucsse HTTP/1.1
+
+###
+curl -X GET "https://disease.sh/v3/covid-19/jhucsse" -H "accept: application/json"
+###
+GET https://disease.sh/v3/covid-19/jhucsse HTTP/1.1
+
+###
+@baseUrl= https://disease.sh/v3/covid-19/jhucsse HTTP/1.1
+@authorization=application/json 
+POST {{baseUrl}}/token
+Authorization: Basic {{authorization}}
+###
+
+GET {{baseUrl}}/country
+Accept: application/json
+//Authorization: Bearer{{accessToken}}
+###
+
+GET {{baseUrl}}/county
+Accept: application/json
+//Authorization: Bearer{{accessToken}}
+
+###
+GET {{baseUrl}}/updatedAt
+Accept: application/json
+//Authorization: Bearer{{accessToken}}
+
+###
+
+GET {{baseUrl}}/confirmed
+Accept: application/json
+//Authorization: Bearer{{accessToken}}
+
+###
+GET {{baseUrl}}/deaths
+Accept: application/json
+Content-Type: {
+   "": {{$randomInt min max}}
+}
+//Authorization: Bearer{{accessToken}}
+###
+GET {{baseUrl}}/recovered
+Accept: application/json
+//Content-Type: {
+  //  "name":{{$processEnv [%]envVarName}},
+    //"recovered": "123"
+
+//Authorization: Bearer{{accessToken}}
+
+
+
+
+
