@@ -1,4 +1,4 @@
-# app1
+# CovidApplication 
 
 A new Flutter project.
 
